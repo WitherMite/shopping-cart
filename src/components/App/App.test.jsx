@@ -10,10 +10,6 @@ describe("App component", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("Sends cart state to outlet context", () => {
-    // create mock component that tests state exists, and set it as a child route of App
-  });
-
   // describe("Nav bar", () => {
   //   // TODO: add a pop out side panel for viewing and editing cart
   //   //       have cart icon have a notification showing item count
