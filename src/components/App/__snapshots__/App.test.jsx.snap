@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > Renders a logo and nav bar inside a header and a main tag 1`] = `
+<div>
+  <header>
+    <img
+      alt=""
+      src="/src/assets/logoipsum-265.svg"
+    />
+    <nav>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        href="/"
+      >
+        Store
+      </a>
+      <a
+        href="/"
+      >
+        Cart
+      </a>
+    </nav>
+  </header>
+  <main />
+</div>
+`;

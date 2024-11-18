@@ -1,10 +1,22 @@
-import { describe, it /*, expect*/ } from "vitest";
-// import { render, screen } from "@testing-library/react";
-// import App from "./App.jsx";
+import { RouterProvider, createMemoryRouter } from "react-router-dom";
+import { describe, it, expect } from "vitest";
+import { render } from "@testing-library/react";
+import App from "./App.jsx";
 
 describe("App component", () => {
-  it("Renders a logo inside header and a main tag", () => {
-    // test against snapshot without nav bar
+  it("Renders a logo and nav bar inside a header and a main tag", () => {
+    const router = createMemoryRouter([{ path: "/", element: <App /> }]);
+    const { container } = render(<RouterProvider router={router} />);
+    expect(container).toMatchSnapshot();
   });
-  it("Renders a nav bar in header", () => {});
+
+  it("Sends cart state to outlet context", () => {
+    // create mock component that tests state exists, and set it as a child route of App
+  });
+
+  // describe("Nav bar", () => {
+  //   // TODO: add a pop out side panel for viewing and editing cart
+  //   //       have cart icon have a notification showing item count
+  //   it("", () => {});
+  // });
 });

@@ -1,16 +1,18 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
-import PropTypes from "prop-types";
-import AppNav from "./App-nav";
+import logoImg from "../../assets/logoipsum-265.svg";
 
-export default function App({ navBar }) {
+export default function App() {
   const [cart, setCart] = useState([]);
-  const navigation = navBar || <AppNav cart={cart} setCart={setCart}></AppNav>;
   return (
     <>
       <header>
-        <img src="" alt="" />
-        {navigation}
+        <img src={logoImg} alt="" />
+        <nav>
+          <Link>Home</Link>
+          <Link>Store</Link>
+          <Link>Cart</Link>
+        </nav>
       </header>
       <main>
         <Outlet context={[cart, setCart]} />
@@ -18,7 +20,3 @@ export default function App({ navBar }) {
     </>
   );
 }
-
-App.propTypes = {
-  navBar: PropTypes.element,
-};
