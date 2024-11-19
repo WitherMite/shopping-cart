@@ -9,3 +9,5 @@ createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </StrictMode>
 );
+
+// https://www.svgrepo.com/collection/scarlab-oval-line-icons/1

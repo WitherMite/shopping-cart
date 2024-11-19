@@ -18,17 +18,29 @@ exports[`App component > Renders a logo and nav bar inside a header and a main t
         <a
           href="/"
         >
-          Home
+          <img
+            alt="Home"
+            class="nav-icon"
+            src="/src/assets/home.svg"
+          />
         </a>
         <a
           href="/"
         >
-          Store
+          <img
+            alt="Store"
+            class="nav-icon"
+            src="/src/assets/shopping-bag.svg"
+          />
         </a>
         <a
           href="/"
         >
-          Cart
+          <img
+            alt="Cart"
+            class="nav-icon"
+            src="/src/assets/shopping-cart.svg"
+          />
         </a>
       </nav>
     </div>

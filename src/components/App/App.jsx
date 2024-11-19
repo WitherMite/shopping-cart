@@ -1,6 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
 import logoImg from "../../assets/logoipsum-265.svg";
+import shopCartImg from "../../assets/shopping-cart.svg";
+import shopBagImg from "../../assets/shopping-bag.svg";
+import homeImg from "../../assets/home.svg";
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -12,9 +15,15 @@ export default function App() {
             <img src={logoImg} alt="" />
           </Link>
           <nav>
-            <Link>Home</Link>
-            <Link>Store</Link>
-            <Link>Cart</Link>
+            <Link>
+              <img src={homeImg} alt="Home" className="nav-icon" />
+            </Link>
+            <Link>
+              <img src={shopBagImg} alt="Store" className="nav-icon" />
+            </Link>
+            <Link>
+              <img src={shopCartImg} alt="Cart" className="nav-icon" />
+            </Link>
           </nav>
         </div>
       </header>

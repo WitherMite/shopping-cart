@@ -27,10 +27,15 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
-header nav {
-  gap: 1rem;
+.nav-icon {
+  width: 38px;
+}
+
+.nav-icon:hover {
+  scale: 1.08;
 }
 
 main {
