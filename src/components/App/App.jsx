@@ -7,12 +7,16 @@ export default function App() {
   return (
     <>
       <header>
-        <img src={logoImg} alt="" />
-        <nav>
-          <Link>Home</Link>
-          <Link>Store</Link>
-          <Link>Cart</Link>
-        </nav>
+        <div className="header-flex-container">
+          <Link>
+            <img src={logoImg} alt="" />
+          </Link>
+          <nav>
+            <Link>Home</Link>
+            <Link>Store</Link>
+            <Link>Cart</Link>
+          </nav>
+        </div>
       </header>
       <main>
         <Outlet context={[cart, setCart]} />
