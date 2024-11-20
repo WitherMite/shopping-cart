@@ -11,17 +11,17 @@ export default function App() {
     <>
       <header>
         <div className="header-flex-container">
-          <Link>
+          <Link to="/">
             <img src={logoImg} alt="" />
           </Link>
           <nav>
-            <Link>
+            <Link to="/">
               <img src={homeImg} alt="Home" className="nav-icon" />
             </Link>
-            <Link>
+            <Link to="/store">
               <img src={shopBagImg} alt="Store" className="nav-icon" />
             </Link>
-            <Link>
+            <Link to="/cart">
               <img src={shopCartImg} alt="Cart" className="nav-icon" />
             </Link>
           </nav>

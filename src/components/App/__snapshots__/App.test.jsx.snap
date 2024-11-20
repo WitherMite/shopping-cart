@@ -25,7 +25,7 @@ exports[`App component > Renders a logo and nav bar inside a header and a main t
           />
         </a>
         <a
-          href="/"
+          href="/store"
         >
           <img
             alt="Store"
@@ -34,7 +34,7 @@ exports[`App component > Renders a logo and nav bar inside a header and a main t
           />
         </a>
         <a
-          href="/"
+          href="/cart"
         >
           <img
             alt="Cart"
