@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ItemCard component > Renders item information 1`] = `
+<div>
+  <section>
+    <img
+      alt=""
+      src="/src/assets/logo-ipsum-small.svg"
+    />
+    <h2>
+      Item 1
+    </h2>
+    <p>
+      This is item number 1, there are many like it, but this is the first
+    </p>
+    <p>
+      $40.00
+    </p>
+    <div
+      class="item-count-field"
+    >
+      <label
+        for="Item 1-count"
+      >
+        Count:
+      </label>
+      <input
+        id="Item 1-count"
+        min="1"
+        step="1"
+        type="number"
+        value="1"
+      />
+    </div>
+    <button>
+      Add to Cart
+    </button>
+  </section>
+</div>
+`;

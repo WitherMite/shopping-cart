@@ -12,6 +12,7 @@ export default function Store() {
   }, []);
 
   function addItemToCart(item, count) {
+    if (count < 1 || count % 1 !== 0) return;
     const newCart = [];
     let inCart = false;
     cart.forEach((entry) => {

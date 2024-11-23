@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 
 const USDFormatter = Intl.NumberFormat("en-US", {
@@ -20,12 +21,31 @@ export default function ItemCard({
   price,
   handleClick,
 }) {
+  const [count, setCount] = useState(1);
+
+  function addToCart() {
+    handleClick(count);
+    setCount(1);
+  }
+
   return (
-    <button onClick={() => handleClick(1)}>
+    <section>
       <img src={image} alt="" />
       <h2>{title}</h2>
       <p>{description}</p>
       <p>{USDFormatter.format(price)}</p>
-    </button>
+      <div className="item-count-field">
+        <label htmlFor={title + "-count"}>Count:</label>
+        <input
+          type="number"
+          min="1"
+          step="1"
+          id={title + "-count"}
+          value={count}
+          onChange={(e) => setCount(Number(e.target.value))}
+        />
+      </div>
+      <button onClick={addToCart}>Add to Cart</button>
+    </section>
   );
 }
