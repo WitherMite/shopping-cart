@@ -1,10 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
 import App from "./components/App/App.jsx";
 import Homepage from "./components/Homepage/Homepage.jsx";
 import Store from "./components/Store/Store.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: <App />,
@@ -14,6 +13,6 @@ const router = createBrowserRouter([
       { path: "/cart", element: <Cart /> },
     ],
   },
-]);
+];
 
-export default router;
+export default routes;

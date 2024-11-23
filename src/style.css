@@ -35,6 +35,7 @@ header nav {
 }
 
 .nav-icon:hover {
+  /* grows to the size of the logo */
   scale: 1.08;
 }
 
