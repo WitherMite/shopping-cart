@@ -11,7 +11,7 @@ ItemCard.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default function ItemCard({

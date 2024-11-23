@@ -8,8 +8,16 @@ import routes from "../../routes.jsx";
 vi.mock("../ItemCard/ItemCard.jsx", { spy: true });
 
 describe("Store component", () => {
-  window.fetch = vi.fn(async (url) => url === "" && testItems);
   const router = createMemoryRouter(routes, { initialEntries: ["/store"] });
+  window.fetch = vi.fn(
+    async (url) =>
+      url === "https://fakestoreapi.com/products" && {
+        json: () =>
+          new Promise((resolve) => {
+            resolve(JSON.stringify(testItems));
+          }),
+      }
+  );
 
   it("Renders header", () => {
     render(<RouterProvider router={router} />);

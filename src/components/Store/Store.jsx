@@ -1,14 +1,15 @@
 import { useOutletContext } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard.jsx";
-import testItems from "./testItems.js";
 
 export default function Store() {
   const [cart, setCart] = useOutletContext();
   const [items, setItems] = useState([]);
   useEffect(() => {
-    // TODO: fetch items from api instead: https://fakestoreapi.com/docs
-    setItems(testItems);
+    // TODO: handle errors - render loading/error elements
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setItems(json));
   }, []);
 
   function addItemToCart(item, count) {
