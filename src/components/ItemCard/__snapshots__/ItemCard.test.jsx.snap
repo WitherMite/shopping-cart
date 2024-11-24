@@ -2,18 +2,27 @@
 
 exports[`ItemCard component > Renders item information 1`] = `
 <div>
-  <section>
+  <section
+    class="store-item-card"
+  >
     <img
       alt=""
+      class="item-img"
       src="/src/assets/logo-ipsum-small.svg"
     />
-    <h2>
+    <h2
+      class="item-title"
+    >
       Item 1
     </h2>
-    <p>
+    <p
+      class="item-description"
+    >
       This is item number 1, there are many like it, but this is the first
     </p>
-    <p>
+    <p
+      class="item-price"
+    >
       $40.00
     </p>
     <div
@@ -32,7 +41,9 @@ exports[`ItemCard component > Renders item information 1`] = `
         value="1"
       />
     </div>
-    <button>
+    <button
+      class="add-item-btn"
+    >
       Add to Cart
     </button>
   </section>

@@ -29,11 +29,11 @@ export default function ItemCard({
   }
 
   return (
-    <section>
-      <img src={image} alt="" />
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p>{USDFormatter.format(price)}</p>
+    <section className="store-item-card">
+      <img src={image} alt="" className="item-img" />
+      <h2 className="item-title">{title}</h2>
+      <p className="item-description">{description}</p>
+      <p className="item-price">{USDFormatter.format(price)}</p>
       <div className="item-count-field">
         <label htmlFor={title + "-count"}>Count:</label>
         <input
@@ -45,7 +45,9 @@ export default function ItemCard({
           onChange={(e) => setCount(Number(e.target.value))}
         />
       </div>
-      <button onClick={addToCart}>Add to Cart</button>
+      <button onClick={addToCart} className="add-item-btn">
+        Add to Cart
+      </button>
     </section>
   );
 }

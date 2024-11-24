@@ -9,7 +9,7 @@ export default function Store() {
     // TODO: handle errors - render loading/error elements
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
-      .then((json) => setItems(json));
+      .then((json) => setItems(JSON.parse(json)));
   }, []);
 
   function addItemToCart(item, count) {
