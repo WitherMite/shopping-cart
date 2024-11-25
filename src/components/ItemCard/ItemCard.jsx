@@ -12,9 +12,11 @@ ItemCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default function ItemCard({
+  id,
   image,
   title,
   description,
@@ -35,12 +37,12 @@ export default function ItemCard({
       <p className="item-description">{description}</p>
       <p className="item-price">{USDFormatter.format(price)}</p>
       <div className="item-count-field">
-        <label htmlFor={title + "-count"}>Count:</label>
+        <label htmlFor={"count-" + id}>Count:</label>
         <input
           type="number"
           min="1"
           step="1"
-          id={title + "-count"}
+          id={"count-" + id}
           value={count}
           onChange={(e) => setCount(Number(e.target.value))}
         />

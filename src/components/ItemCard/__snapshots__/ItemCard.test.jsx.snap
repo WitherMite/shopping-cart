@@ -29,12 +29,12 @@ exports[`ItemCard component > Renders item information 1`] = `
       class="item-count-field"
     >
       <label
-        for="Item 1-count"
+        for="count-1"
       >
         Count:
       </label>
       <input
-        id="Item 1-count"
+        id="count-1"
         min="1"
         step="1"
         type="number"
