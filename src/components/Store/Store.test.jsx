@@ -14,7 +14,7 @@ describe("Store component", () => {
       url === "https://fakestoreapi.com/products" && {
         json: () =>
           new Promise((resolve) => {
-            resolve(JSON.stringify(testItems));
+            resolve(testItems);
           }),
       }
   );
