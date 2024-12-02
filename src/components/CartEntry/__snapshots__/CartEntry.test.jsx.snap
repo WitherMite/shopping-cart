@@ -1,0 +1,57 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CartEntry component > Renders entry info and component's children 1`] = `
+<div>
+  <section
+    class="cart-item-card"
+  >
+    <img
+      alt=""
+      class="item-img"
+      src="/src/assets/logo-ipsum-small.svg"
+    />
+    <h2
+      class="item-title"
+    >
+      Item 1
+    </h2>
+    <div>
+      Hello there.
+    </div>
+    <p
+      class="item-price"
+    >
+      $40.00 / item
+    </p>
+    <div
+      class="item-count-field"
+    >
+      <button
+        class="cart-subtract-item-btn"
+      >
+        -
+      </button>
+      <p
+        class="item-count"
+      >
+        1
+      </p>
+      <button
+        class="cart-add-item-btn"
+      >
+        +
+      </button>
+    </div>
+    <p
+      class="entry-price"
+    >
+      $40.00
+    </p>
+    <button
+      class="cart-remove-item-btn"
+    >
+      Remove from Cart
+    </button>
+  </section>
+</div>
+`;

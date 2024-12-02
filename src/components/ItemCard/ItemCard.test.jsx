@@ -4,6 +4,8 @@ import userEvent from "@testing-library/user-event";
 import ItemCard from "../ItemCard/ItemCard.jsx";
 import testItems from "../Store/testItems.js";
 
+// have description be hidden until element is clicked
+
 describe("ItemCard component", () => {
   it("Renders item information", () => {
     const { container } = render(

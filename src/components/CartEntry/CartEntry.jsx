@@ -6,7 +6,9 @@ const USDFormatter = Intl.NumberFormat("en-US", {
 });
 
 CartEntry.propTypes = {
-  handleClick: PropTypes.func,
+  onIncrement: PropTypes.func,
+  onDecrement: PropTypes.func,
+  onDelete: PropTypes.func,
   image: PropTypes.string,
   title: PropTypes.string.isRequired,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -22,7 +24,9 @@ export default function CartEntry({
   title,
   price,
   count,
-  handleClick,
+  onIncrement,
+  onDecrement,
+  onDelete,
   children,
 }) {
   return (
@@ -32,16 +36,16 @@ export default function CartEntry({
       {children}
       <p className="item-price">{USDFormatter.format(price) + " / item"}</p>
       <div className="item-count-field">
-        <button onClick={handleClick} className="cart-subtract-item-btn">
+        <button onClick={onDecrement} className="cart-subtract-item-btn">
           -
         </button>
         <p className="item-count">{count}</p>
-        <button onClick={handleClick} className="cart-add-item-btn">
+        <button onClick={onIncrement} className="cart-add-item-btn">
           +
         </button>
       </div>
       <p className="entry-price">{USDFormatter.format(price * count)}</p>
-      <button onClick={handleClick} className="cart-remove-item-btn">
+      <button onClick={onDelete} className="cart-remove-item-btn">
         Remove from Cart
       </button>
     </section>
