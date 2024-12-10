@@ -1,6 +1,11 @@
 import { useOutletContext } from "react-router-dom";
 import PropTypes from "prop-types";
 import CartEntry from "../CartEntry/CartEntry.jsx";
+import {
+  addToCart,
+  deleteEntryFromCart,
+  removeFromCart,
+} from "../../cart-helpers/cart-helpers.js";
 
 const USDFormatter = Intl.NumberFormat("en-US", {
   style: "currency",
@@ -26,13 +31,23 @@ export default function Cart({ cartState, onCheckout }) {
       </button>
       <section className="cart-grid-container">
         {cart.map((entry) => (
-          <CartEntry key={entry.id} {...entry} handleClick={setCart} />
+          <CartEntry
+            key={entry.id}
+            {...entry}
+            onIncrement={() => addToCart(cart, entry, 1, setCart)}
+            onDecrement={() => removeFromCart(cart, entry, setCart)}
+            onDelete={() => deleteEntryFromCart(cart, entry, setCart)}
+          />
         ))}
       </section>
-      <p>Subtotal: {totalPrice}</p>
-      <button className="checkout-btn" onClick={onCheckout}>
-        Checkout
-      </button>
+      {cart.length > 0 && (
+        <>
+          <p>Subtotal: {totalPrice}</p>
+          <button className="checkout-btn" onClick={onCheckout}>
+            Checkout
+          </button>
+        </>
+      )}
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard.jsx";
+import { addToCart } from "../../cart-helpers/cart-helpers.js";
 
 export default function Store() {
   const [cart, setCart] = useOutletContext();
@@ -12,20 +13,6 @@ export default function Store() {
       .then((json) => setItems(json));
   }, []);
 
-  function addItemToCart(item, count) {
-    if (count < 1 || count % 1 !== 0) return;
-    const newCart = [];
-    let inCart = false;
-    cart.forEach((entry) => {
-      if (entry.id === item.id) {
-        inCart = true;
-        newCart.push({ ...entry, count: entry.count + count });
-      } else newCart.push(entry);
-    });
-    if (!inCart) newCart.push({ ...item, count });
-    setCart(newCart);
-  }
-
   return (
     <>
       <h1>Store:</h1>
@@ -34,7 +21,7 @@ export default function Store() {
           <ItemCard
             key={item.id}
             {...item}
-            handleClick={(count) => addItemToCart(item, count)}
+            handleClick={(count) => addToCart(cart, item, count, setCart)}
           />
         ))}
       </section>
