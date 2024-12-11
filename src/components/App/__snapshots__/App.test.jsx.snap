@@ -34,11 +34,13 @@ exports[`App component > Renders a logo and nav bar inside a header and a main t
           />
         </a>
         <a
+          aria-labelledby="cartLinkImg"
           href="/cart"
         >
           <img
             alt="Cart"
             class="nav-icon"
+            id="cartLinkImg"
             src="/src/assets/shopping-cart.svg"
           />
         </a>

@@ -1,6 +1,7 @@
 function isItem(item) {
   const isSimpleObject =
     typeof item === "object" &&
+    item !== null &&
     !Array.isArray(item) &&
     !(item instanceof Set) &&
     !(item instanceof Map);
@@ -18,8 +19,12 @@ function isItem(item) {
 
   let hasRequiredProps = true;
   for (const [key, checkType] of requiredProps) {
-    if (!Object.hasOwn(item, key) || !checkType(item)) {
-      hasRequiredProps = false;
+    try {
+      if (!Object.hasOwn(item, key) || !checkType(item)) {
+        hasRequiredProps = false;
+        break;
+      }
+    } catch {
       break;
     }
   }

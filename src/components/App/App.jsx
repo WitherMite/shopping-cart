@@ -1,12 +1,23 @@
 import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import logoImg from "../../assets/logoipsum-265.svg";
 import shopCartImg from "../../assets/shopping-cart.svg";
 import shopBagImg from "../../assets/shopping-bag.svg";
 import homeImg from "../../assets/home.svg";
 
-export default function App() {
-  const [cart, setCart] = useState([]);
+App.propTypes = {
+  initialCart: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    })
+  ),
+};
+
+export default function App({ initialCart = [] }) {
+  const [cart, setCart] = useState(initialCart);
   return (
     <>
       <header>
@@ -21,8 +32,18 @@ export default function App() {
             <Link to="/store">
               <img src={shopBagImg} alt="Store" className="nav-icon" />
             </Link>
-            <Link to="/cart">
-              <img src={shopCartImg} alt="Cart" className="nav-icon" />
+            <Link to="/cart" aria-labelledby="cartLinkImg">
+              <img
+                src={shopCartImg}
+                alt="Cart"
+                className="nav-icon"
+                id="cartLinkImg"
+              />
+              {cart.length > 0 && (
+                <span className="notification">
+                  {cart.reduce((count, entry) => count + entry.count, 0)}
+                </span>
+              )}
             </Link>
           </nav>
         </div>
