@@ -47,16 +47,16 @@ describe("Cart component", () => {
     expect(subtotalElements[1].textContent).toBe(`Subtotal: ${actualSubtotal}`);
   });
 
-  it("calls onCheckout prop when any Checkout button is clicked", async () => {
+  it("clears cart when any Checkout button is clicked", async () => {
     const user = userEvent.setup();
     const fn = vi.fn();
-    render(<Cart cartState={[testEntries, () => {}]} onCheckout={fn} />);
+    render(<Cart cartState={[testEntries, fn]} />);
     const buttons = screen.getAllByRole("button", { name: "Checkout" });
 
     for (const btn of buttons) {
       await user.click(btn);
     }
 
-    expect(fn).toBeCalledTimes(buttons.length);
+    fn.mock.calls.forEach((call) => expect(call[0]).toStrictEqual([]));
   });
 });

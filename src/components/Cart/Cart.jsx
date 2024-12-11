@@ -17,16 +17,21 @@ Cart.propTypes = {
   onCheckout: PropTypes.func,
 };
 
-export default function Cart({ cartState, onCheckout }) {
+export default function Cart({ cartState }) {
   const [cart, setCart] = useOutletContext() || cartState;
   const totalPrice = USDFormatter.format(
     cart.reduce((total, item) => total + item.price * item.count, 0)
   );
+
+  function handleCheckout() {
+    // just clears cart, lesson spec doesnt say to do anything else
+    setCart([]);
+  }
   return (
     <>
       <h1>Cart:</h1>
       <p>Subtotal: {totalPrice}</p>
-      <button className="checkout-btn" onClick={onCheckout}>
+      <button className="checkout-btn" onClick={handleCheckout}>
         Checkout
       </button>
       <section className="cart-grid-container">
@@ -43,7 +48,7 @@ export default function Cart({ cartState, onCheckout }) {
       {cart.length > 0 && (
         <>
           <p>Subtotal: {totalPrice}</p>
-          <button className="checkout-btn" onClick={onCheckout}>
+          <button className="checkout-btn" onClick={handleCheckout}>
             Checkout
           </button>
         </>
