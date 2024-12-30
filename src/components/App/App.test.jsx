@@ -11,6 +11,24 @@ describe("App component", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("Renders children in main tag", () => {
+    const Child = () => <div data-testid="childEle"></div>;
+    const router = createMemoryRouter([
+      {
+        path: "/",
+        element: (
+          <App>
+            <Child />
+          </App>
+        ),
+      },
+    ]);
+    render(<RouterProvider router={router} />);
+
+    const main = screen.getByRole("main");
+    expect(() => within(main).getByTestId("childEle")).not.toThrow();
+  });
+
   describe("Nav bar", () => {
     it("cart icon has a notification showing item count", () => {
       const router = createMemoryRouter([

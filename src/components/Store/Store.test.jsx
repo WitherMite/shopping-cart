@@ -39,6 +39,4 @@ describe("Store component", () => {
     expect(propsTwo).toMatchObject(testItems[1]);
     expect(propsThree).toMatchObject(testItems[2]);
   });
-
-  // Features to consider: add dropdown to filter items by category, maybe a sort function too.
 });

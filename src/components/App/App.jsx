@@ -14,9 +14,13 @@ App.propTypes = {
       count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 };
 
-export default function App({ initialCart = [] }) {
+export default function App({ initialCart = [], children }) {
   const [cart, setCart] = useState(initialCart);
   return (
     <>
@@ -48,9 +52,7 @@ export default function App({ initialCart = [] }) {
           </nav>
         </div>
       </header>
-      <main>
-        <Outlet context={[cart, setCart]} />
-      </main>
+      <main>{children || <Outlet context={[cart, setCart]} />}</main>
     </>
   );
 }
