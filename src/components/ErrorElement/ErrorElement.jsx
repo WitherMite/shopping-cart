@@ -8,15 +8,26 @@ ErrorElement.propTypes = {
 export default function ErrorElement({ error }) {
   let message, solution;
 
-  // change solution depending on error
-  switch (error.message) {
+  switch (error?.message) {
     case "Failed to fetch": {
       message = "Could not get items.";
-      solution = <Link to="/store"> Check internet and reload page</Link>;
+      solution = (
+        <>
+          Check internet and{" "}
+          <Link to="/store" reloadDocument>
+            reload page
+          </Link>
+        </>
+      );
+      break;
+    }
+    case undefined: {
+      message = "This page does not exist";
+      solution = <Link to="/"> Return to Homepage </Link>;
       break;
     }
     default: {
-      message = "This page does not exist";
+      message = error.message;
       solution = <Link to="/"> Return to Homepage </Link>;
     }
   }
