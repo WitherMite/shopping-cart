@@ -20,8 +20,11 @@ body {
 }
 
 header {
-  background-color: var(--secondary-color);
   padding: 1.25rem 0;
+}
+
+.app-banner {
+  background-color: var(--secondary-color);
   position: sticky;
   top: 0;
 }
@@ -73,6 +76,7 @@ main {
 
 .item-img {
   width: 100%;
+  max-width: 400px;
   aspect-ratio: 1;
   object-fit: contain;
 }

@@ -19,12 +19,8 @@ function isItem(item) {
 
   let hasRequiredProps = true;
   for (const [key, checkType] of requiredProps) {
-    try {
-      if (!Object.hasOwn(item, key) || !checkType(item)) {
-        hasRequiredProps = false;
-        break;
-      }
-    } catch {
+    if (!Object.hasOwn(item, key) || !checkType(item)) {
+      hasRequiredProps = false;
       break;
     }
   }

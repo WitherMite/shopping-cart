@@ -1,0 +1,135 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Renders static homepage 1`] = `
+<div>
+  <header
+    class="homepage-hero"
+  >
+    <div
+      class="hero-image"
+    >
+      <img
+        alt=""
+        src="/src/assets/hero-image.png"
+      />
+      <a
+        href="https://www.freepik.com/free-photo/beauty-fashion-concept-full-length-young-woman-sticking-head-inside-purse-searching-somet_40245224.htm#fromView=search&page=1&position=49&uuid=782d1c21-379a-4328-b57e-dd88b5fb1745&new_detail=true"
+      >
+        Image by benzoix on Freepik
+      </a>
+    </div>
+    <h1>
+      Welcome to my store!
+    </h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde cumque porro minima debitis a quis aliquid quidem. Ipsa voluptas tenetur earum? Et a rem, nulla adipisci totam similique tempore. Sequi fuga quidem veniam quia voluptate! Maiores magni dicta deserunt et rem perferendis, eaque recusandae culpa obcaecati id quam, velit labore. Accusantium.
+    </p>
+  </header>
+  <section
+    class="homepage-content"
+  >
+    <h2>
+      Shop our selection:
+    </h2>
+    <div
+      class="categories"
+    >
+      <div
+        class="category-card"
+      >
+        <img
+          alt="A men's T-shirt"
+          src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+        />
+        <h3>
+          Men's wear
+        </h3>
+        <a
+          href="/store"
+        >
+          <button>
+            Shop
+          </button>
+        </a>
+      </div>
+      <div
+        class="category-card"
+      >
+        <img
+          alt="A diamond ring"
+          src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+        />
+        <h3>
+          Jewelry
+        </h3>
+        <a
+          href="/store"
+        >
+          <button>
+            Shop
+          </button>
+        </a>
+      </div>
+      <div
+        class="category-card"
+      >
+        <img
+          alt="A women's short sleeve shirt"
+          src="https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+        />
+        <h3>
+          Women's wear
+        </h3>
+        <a
+          href="/store"
+        >
+          <button>
+            Shop
+          </button>
+        </a>
+      </div>
+      <div
+        class="category-card"
+      >
+        <img
+          alt="A curved ultrawide computer monitor"
+          src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+        />
+        <h3>
+          Technology
+        </h3>
+        <a
+          href="/store"
+        >
+          <button>
+            Shop
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    class="homepage-information"
+  >
+    <address>
+      <p>
+        1234 Fake St. 
+        <br />
+        Imaginary, Montana 45554
+      </p>
+      <p>
+        102-938-4756
+      </p>
+      <p>
+        example.email@gmail.com
+      </p>
+    </address>
+    <div
+      class="about"
+    />
+    <div
+      class="support"
+    />
+  </section>
+</div>
+`;

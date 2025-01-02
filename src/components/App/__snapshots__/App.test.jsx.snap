@@ -2,7 +2,9 @@
 
 exports[`App component > Renders a logo and nav bar inside a header and a main tag 1`] = `
 <div>
-  <header>
+  <header
+    class="app-banner"
+  >
     <div
       class="header-flex-container"
     >

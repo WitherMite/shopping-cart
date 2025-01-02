@@ -24,7 +24,7 @@ export default function App({ initialCart = [], children }) {
   const [cart, setCart] = useState(initialCart);
   return (
     <>
-      <header>
+      <header className="app-banner">
         <div className="header-flex-container">
           <Link to="/">
             <img src={logoImg} alt="" />
