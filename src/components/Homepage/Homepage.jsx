@@ -18,7 +18,13 @@ export default function Homepage() {
           earum? Et a rem, nulla adipisci totam similique tempore. Sequi fuga
           quidem veniam quia voluptate! Maiores magni dicta deserunt et rem
           perferendis, eaque recusandae culpa obcaecati id quam, velit labore.
-          Accusantium.
+          Accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Aliquid enim dolorum impedit consequuntur deleniti pariatur harum
+          officiis molestias doloribus nam dolorem, similique quam minus maxime
+          fugit magnam fuga accusantium hic? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Libero sequi iure omnis asperiores.
+          Reiciendis ut doloribus inventore libero, corporis quo hic quisquam
+          similique nostrum nam saepe. Perferendis sequi libero maxime!
         </p>
       </header>
       <section className="homepage-content">
@@ -31,17 +37,17 @@ export default function Homepage() {
             />
             <h3>Men&apos;s wear</h3>
             <Link to="/store">
-              <button>Shop</button>
+              <button className="shop-btn">Shop</button>
             </Link>
           </div>
           <div className="category-card">
             <img
-              src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
-              alt="A diamond ring"
+              src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+              alt="A ring encrusted with diamonds"
             />
             <h3>Jewelry</h3>
             <Link to="/store">
-              <button>Shop</button>
+              <button className="shop-btn">Shop</button>
             </Link>
           </div>
           <div className="category-card">
@@ -51,7 +57,7 @@ export default function Homepage() {
             />
             <h3>Women&apos;s wear</h3>
             <Link to="/store">
-              <button>Shop</button>
+              <button className="shop-btn">Shop</button>
             </Link>
           </div>
           <div className="category-card">
@@ -61,31 +67,9 @@ export default function Homepage() {
             />
             <h3>Technology</h3>
             <Link to="/store">
-              <button>Shop</button>
+              <button className="shop-btn">Shop</button>
             </Link>
           </div>
-        </div>
-      </section>
-      <section className="homepage-information">
-        <address>
-          <h3>Location</h3>
-          <p>
-            1234 Fake St. <br />
-            Imaginary, Montana 45554
-          </p>
-          <p>102-938-4756</p>
-          <p>example.email@gmail.com</p>
-        </address>
-        <div className="about">
-          <h3>About</h3>
-          <p>Our Story</p>
-          <p>FAQ</p>
-        </div>
-        <div className="support">
-          <h3>Support</h3>
-          <p>Contact Us</p>
-          <p>Help Center</p>
-          <p>Careers</p>
         </div>
       </section>
     </>

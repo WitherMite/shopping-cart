@@ -22,7 +22,7 @@ exports[`Renders static homepage 1`] = `
       Welcome to my store!
     </h1>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde cumque porro minima debitis a quis aliquid quidem. Ipsa voluptas tenetur earum? Et a rem, nulla adipisci totam similique tempore. Sequi fuga quidem veniam quia voluptate! Maiores magni dicta deserunt et rem perferendis, eaque recusandae culpa obcaecati id quam, velit labore. Accusantium.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde cumque porro minima debitis a quis aliquid quidem. Ipsa voluptas tenetur earum? Et a rem, nulla adipisci totam similique tempore. Sequi fuga quidem veniam quia voluptate! Maiores magni dicta deserunt et rem perferendis, eaque recusandae culpa obcaecati id quam, velit labore. Accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim dolorum impedit consequuntur deleniti pariatur harum officiis molestias doloribus nam dolorem, similique quam minus maxime fugit magnam fuga accusantium hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sequi iure omnis asperiores. Reiciendis ut doloribus inventore libero, corporis quo hic quisquam similique nostrum nam saepe. Perferendis sequi libero maxime!
     </p>
   </header>
   <section
@@ -47,7 +47,9 @@ exports[`Renders static homepage 1`] = `
         <a
           href="/store"
         >
-          <button>
+          <button
+            class="shop-btn"
+          >
             Shop
           </button>
         </a>
@@ -56,8 +58,8 @@ exports[`Renders static homepage 1`] = `
         class="category-card"
       >
         <img
-          alt="A diamond ring"
-          src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+          alt="A ring encrusted with diamonds"
+          src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
         />
         <h3>
           Jewelry
@@ -65,7 +67,9 @@ exports[`Renders static homepage 1`] = `
         <a
           href="/store"
         >
-          <button>
+          <button
+            class="shop-btn"
+          >
             Shop
           </button>
         </a>
@@ -83,7 +87,9 @@ exports[`Renders static homepage 1`] = `
         <a
           href="/store"
         >
-          <button>
+          <button
+            class="shop-btn"
+          >
             Shop
           </button>
         </a>
@@ -101,35 +107,14 @@ exports[`Renders static homepage 1`] = `
         <a
           href="/store"
         >
-          <button>
+          <button
+            class="shop-btn"
+          >
             Shop
           </button>
         </a>
       </div>
     </div>
-  </section>
-  <section
-    class="homepage-information"
-  >
-    <address>
-      <p>
-        1234 Fake St. 
-        <br />
-        Imaginary, Montana 45554
-      </p>
-      <p>
-        102-938-4756
-      </p>
-      <p>
-        example.email@gmail.com
-      </p>
-    </address>
-    <div
-      class="about"
-    />
-    <div
-      class="support"
-    />
   </section>
 </div>
 `;

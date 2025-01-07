@@ -44,15 +44,42 @@ export default function App({ initialCart = [], children }) {
                 id="cartLinkImg"
               />
               {cart.length > 0 && (
-                <span className="notification">
+                <div className="notification">
                   {cart.reduce((count, entry) => count + entry.count, 0)}
-                </span>
+                </div>
               )}
             </Link>
           </nav>
         </div>
       </header>
-      <main>{children || <Outlet context={[cart, setCart]} />}</main>
+      <div className="main-flex-track">
+        <main>{children || <Outlet context={[cart, setCart]} />}</main>
+      </div>
+
+      <footer className="homepage-information">
+        <div className="information-flex-container">
+          <address>
+            <h3>Location</h3>
+            <p>
+              1234 Fake St. <br />
+              Imaginary, Montana 45554
+            </p>
+            <p>102-938-4756</p>
+            <p>example.email@gmail.com</p>
+          </address>
+          <div className="about">
+            <h3>About</h3>
+            <p>Our Story</p>
+            <p>FAQ</p>
+          </div>
+          <div className="support">
+            <h3>Support</h3>
+            <p>Contact Us</p>
+            <p>Help Center</p>
+            <p>Careers</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
