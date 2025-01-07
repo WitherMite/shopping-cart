@@ -34,17 +34,19 @@ export default function Cart({ cartState }) {
       <button className="checkout-btn" onClick={handleCheckout}>
         Checkout
       </button>
-      <section className="cart-grid-container">
-        {cart.map((entry) => (
-          <CartEntry
-            key={entry.id}
-            {...entry}
-            onIncrement={() => addToCart(cart, entry, 1, setCart)}
-            onDecrement={() => removeFromCart(cart, entry, setCart)}
-            onDelete={() => deleteEntryFromCart(cart, entry, setCart)}
-          />
-        ))}
-      </section>
+      {cart.length > 0 && (
+        <section className="cart-grid-container">
+          {cart.map((entry) => (
+            <CartEntry
+              key={entry.id}
+              {...entry}
+              onIncrement={() => addToCart(cart, entry, 1, setCart)}
+              onDecrement={() => removeFromCart(cart, entry, setCart)}
+              onDelete={() => deleteEntryFromCart(cart, entry, setCart)}
+            />
+          ))}
+        </section>
+      )}
       {cart.length > 0 && (
         <>
           <p>Subtotal: {totalPrice}</p>

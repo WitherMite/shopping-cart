@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard.jsx";
 import { addToCart } from "../../cart-helpers/cart-helpers.js";
 import ErrorElement from "../ErrorElement/ErrorElement.jsx";
+import loadingSpinner from "../../assets/loading-spinner.svg";
 
 export default function Store() {
   const [cart, setCart] = useOutletContext();
@@ -20,7 +21,9 @@ export default function Store() {
     <>
       <h1>Store:</h1>
       {items === null ? (
-        <div className="loading-spinner"></div>
+        <div className="spinner-container">
+          <img className="loading-spinner" src={loadingSpinner} alt="" />
+        </div>
       ) : (
         <section className="store-grid-container">
           {Array.isArray(items)
